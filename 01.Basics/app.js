@@ -98,3 +98,34 @@ console.log(`includes=> ${ful1.includes("s")}`);
 // Trim
 var nen = "    adsda  asdasd     ";
 console.log(`Trim=> ${nen.trim()}`);
+
+// Type conversion
+
+// String to Number
+let money = "50";
+console.log(typeof money);
+money = parseInt(money);
+console.log(typeof money);
+
+let mon2 = "50";
+console.log(typeof mon2);
+mon2 = +mon2;
+console.log(typeof mon2);
+
+let mon3 = "50";
+console.log(typeof mon3);
+mon3 = Number(mon3);
+console.log(typeof mon3);
+
+//  number to String
+
+let it = 50;
+console.log(typeof it);
+console.log(typeof it.toString());
+console.log(typeof String(it));
+
+// convert sting to floating
+
+let you = "50.50";
+console.log(typeof you);
+console.log(typeof parseFloat(you));
