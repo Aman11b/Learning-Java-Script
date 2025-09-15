@@ -219,3 +219,15 @@ console.log(JSON.stringify(per1));
 
 // parsed
 console.log(JSON.parse(JSON.stringify(per1)));
+
+// date and time
+console.log("date and time ->>>>");
+const currentDate = new Date();
+console.log(currentDate);
+
+// year month,day,hours,minutes,second,milliseconds
+const dat = new Date(2024, 2, 24, 12, 30, 0, 0);
+console.log(dat);
+console.log(currentDate.getFullYear());
+console.log(currentDate.getHours());
+console.log(currentDate.getMonth);
