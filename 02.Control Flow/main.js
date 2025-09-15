@@ -173,3 +173,27 @@ function func4(fun4) {
 func4(function (value) {
   console.log(value * 3);
 });
+
+// global scope-> declared outside block
+// local-> declared inside block
+
+// method -> reference of function in object
+console.log("methods->>>>");
+function func5() {
+  return `hi ${person.nam}. live ${person.loc}`;
+}
+const person = {
+  nam: "rahu",
+  loc: "heheu",
+  func5,
+};
+console.log(person.func5());
+
+const obj1 = {
+  a: "fe",
+  b: 5,
+  greet: function () {
+    return `${obj1.a}=>${obj1.b}`;
+  },
+};
+console.log(obj1.greet());
