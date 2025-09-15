@@ -231,3 +231,23 @@ console.log(dat);
 console.log(currentDate.getFullYear());
 console.log(currentDate.getHours());
 console.log(currentDate.getMonth);
+
+// set interval
+console.log("setinterval ->>>");
+setInterval(() => {
+  // console.log("every 3 sec"), 3000;
+});
+// set time out
+setTimeout(function () {
+  console.log("hi after 3 sec");
+  3000;
+});
+// clearInterval
+const interval = setInterval(() => {
+  console.log("every 1 sec");
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(interval);
+  console.log("stopped after 3 sec");
+}, 3000);
