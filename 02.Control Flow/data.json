@@ -1,0 +1,11 @@
+{
+  "name": "name",
+  "Age": 20,
+  "email": "js@gmail.com",
+  "isSubscribed": true,
+  "hobbies": ["run", "read"],
+  "address": {
+    "city": "NY",
+    "idk": true
+  }
+}

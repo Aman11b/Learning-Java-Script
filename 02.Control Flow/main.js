@@ -197,3 +197,25 @@ const obj1 = {
   },
 };
 console.log(obj1.greet());
+
+// JSON JAVASCRIPT OBJECT NOTATION
+console.log("JSON->>>>");
+
+const per1 = {
+  name: "name",
+  Age: 20,
+  email: "js@gmail.com",
+  isSubscribed: true,
+  hobbies: ["run", "read"],
+  address: {
+    city: "NY",
+    idk: true,
+  },
+};
+
+// json .stringify
+console.log(per1);
+console.log(JSON.stringify(per1));
+
+// parsed
+console.log(JSON.parse(JSON.stringify(per1)));
