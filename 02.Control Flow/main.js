@@ -63,6 +63,8 @@ console.log(true && true);
 console.log(false || true);
 console.log(!true);
 
+console.log("Arrays-->>>>>");
+
 // Arrays -> 0 index based
 
 // empty array
@@ -120,3 +122,54 @@ console.log(num.slice(0, 2));
 // sort
 num.reverse();
 console.log(num.sort());
+
+// OBJECTS -> {'label':value}
+console.log("Objects->>>>>>");
+
+const per = {
+  h: 1,
+  b: "two",
+  d: [1, 2, 3, 4, 5],
+  e: true,
+};
+per.g = [1, 2, 3, 4];
+console.log(per);
+console.log(typeof per);
+
+// accessing items from object
+console.log(per.d);
+console.log(per.h);
+
+console.log(per["g"]);
+delete per.g;
+console.log(per["g"]);
+
+// functions
+console.log("functions->>>>");
+
+// function declaration
+function fun1() {
+  console.log(" this is fun1");
+}
+fun1();
+
+function fun2(string) {
+  console.log(`I am ${string}.`);
+}
+fun2("He");
+
+// return in function
+function fun3(a, b) {
+  const c = a + b;
+  return c;
+}
+console.log(fun3(2, 3));
+
+// callback function-> function as argument
+function func4(fun4) {
+  const value = 10;
+  fun4(4);
+}
+func4(function (value) {
+  console.log(value * 3);
+});
