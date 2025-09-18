@@ -203,3 +203,9 @@ console.log("filter->>");
 // call back return true false
 const tg = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log(tg.filter((num) => num % 2 == 0));
+
+// find
+// find  first matched element in array
+console.log("find->>");
+const fd = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(fd.find((num) => num % 2 == 0));
