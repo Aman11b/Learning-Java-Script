@@ -140,8 +140,26 @@ console.log(singer);
 // destructuring mixture
 
 // ternary operator
+console.log("ternary operator->>");
 let pass = 2;
 function pk(ps) {
   return ps === 8 ? "Strong" : "weak";
 }
 console.log(pk(pass));
+
+// for in loop
+console.log("fon in loop->>");
+let hi = {
+  name: "hell",
+  age: 12,
+  gender: "male",
+};
+
+for (let keys in hi) {
+  console.log(keys, hi[keys]);
+}
+
+let ar = [1, 2, 3, 4, 5, 6, 7];
+for (let index in ar) {
+  console.log(`${index}:${ar[index]}`);
+}
