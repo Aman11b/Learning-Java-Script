@@ -183,7 +183,16 @@ tata.forEach((clr) => {
 });
 
 // element -> index-> arr (sequence is fixed)
+//  no new array is created here
 const newT = tata.forEach((number, index, arr) => {
   arr[index] = number * 2;
 });
 console.log(newT);
+
+// map helper
+console.log("map->>>");
+// new array is created
+const tl = [1, 2, 3, 4, 5, 6];
+const fl = tl.map((num) => num * 2);
+console.log(fl);
+console.log(tl);
