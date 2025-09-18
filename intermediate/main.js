@@ -163,3 +163,27 @@ let ar = [1, 2, 3, 4, 5, 6, 7];
 for (let index in ar) {
   console.log(`${index}:${ar[index]}`);
 }
+
+console.log("for of loop ->>");
+let pl = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+for (let people of pl) {
+  console.log(people);
+}
+
+const tx = "hellow";
+for (const char of tx) {
+  console.log(char);
+}
+
+// for each helper
+console.log("for each->>");
+const tata = [1, 2, 3, 4, 5];
+tata.forEach((clr) => {
+  console.log(clr * 2);
+});
+
+// element -> index-> arr (sequence is fixed)
+const newT = tata.forEach((number, index, arr) => {
+  arr[index] = number * 2;
+});
+console.log(newT);
