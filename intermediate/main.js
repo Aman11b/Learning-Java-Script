@@ -138,3 +138,10 @@ const [, { singer }] = song;
 console.log(singer);
 
 // destructuring mixture
+
+// ternary operator
+let pass = 2;
+function pk(ps) {
+  return ps === 8 ? "Strong" : "weak";
+}
+console.log(pk(pass));
