@@ -51,3 +51,90 @@ function user(x, ...data) {
   console.log(data);
 }
 user("1", 2, 3, 4, 5, 6, 7);
+
+// destructure array
+console.log("Destructuring ->>>");
+// arrays
+const test = [1, 2, 3];
+const [one, two, three, four] = test;
+console.log(one);
+console.log(two);
+console.log(three);
+console.log(four);
+
+let a, b;
+[a = 5, b = 8] = [1];
+console.log(a);
+
+[a = 5, b = 8] = [];
+console.log(a);
+
+// returning from function
+function fun23() {
+  return [1, 2];
+}
+let c, d;
+[c, d] = fun23();
+console.log(c);
+console.log(d);
+
+function fun32() {
+  return [1, 2, 3];
+}
+const [e, , f] = fun32();
+console.log(e, f);
+
+// assigning the rest of an array to a variable
+const [p, ...q] = [1, 2, 3, 4, 5, 6, 7];
+console.log(p, q);
+
+// object destructuring
+// obj label should be same
+const student = { name: "hi", position: "first", roll: 23 };
+const { name, position, roll } = student;
+console.log(name, position, roll);
+
+const num2 = { x: 100, y: 200 };
+const { x: new1, y: new2 } = num2;
+console.log(new1, new2);
+// console.log(x, y);
+
+// object destructuring and rest
+const { r, t, ...rest } = { a: 1, b: 2, d: 4, g: 5, f: 7 };
+console.log(a, b, rest);
+
+// function destructuring
+const person = {
+  name: "hehe",
+  age: 20,
+  country: "india",
+};
+function tp({ name, age, country }) {
+  console.log(name, age, country);
+}
+tp(person);
+
+const options = {
+  title: "my",
+  item: [1, 2],
+};
+function show({
+  title,
+  width: w = 100,
+  height: h = 200,
+  item: [item1, item2],
+}) {
+  console.log(title, w, h, item1, item2);
+}
+show(options);
+
+// nested destructuring
+const song = [
+  { name: "lu", singer: "ho", duration: 23 },
+  { name: "lo", singer: "hs", duration: 3 },
+  { name: "lp", singer: "hv", duration: 24 },
+];
+const [, { singer }] = song;
+console.log(singer);
+
+// destructuring mixture
