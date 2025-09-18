@@ -196,3 +196,10 @@ const tl = [1, 2, 3, 4, 5, 6];
 const fl = tl.map((num) => num * 2);
 console.log(fl);
 console.log(tl);
+
+// filter
+console.log("filter->>");
+// conditional filter on array
+// call back return true false
+const tg = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(tg.filter((num) => num % 2 == 0));
