@@ -264,3 +264,28 @@ for (let key of mp.keys()) {
 for (let value of mp.values()) {
   console.log(`values: ${value}`);
 }
+
+// set
+// only unique
+console.log("Set -->>");
+const myst = new Set();
+console.log(myst);
+myst.add(1);
+myst.add(2);
+myst.add(2);
+myst.add(3);
+myst.add(15);
+console.log(myst);
+console.log(myst.has(15));
+myst.delete(15);
+console.log(myst.has(15));
+myst.add(15);
+myst.clear();
+console.log(myst);
+
+const mys1 = new Set([1, 2, 3, 3, 3, 3, 4, 45, 6]);
+console.log(mys1);
+
+for (let item of myst) {
+  console.log(item);
+}
