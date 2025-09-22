@@ -229,3 +229,38 @@ const sum = pr.reduce((p, c) => {
 // previous value
 // current value
 console.log(sum);
+
+// map
+console.log("map ->>");
+// map like object but here key any be of any data type also maintain insertion order
+
+const mp = new Map();
+console.log(mp);
+
+const key1 = "str1";
+const key2 = {};
+const key3 = function () {};
+
+mp.set(key1, "value");
+console.log(mp);
+mp.set(key3, "value 3");
+mp.set(key2, "value 2");
+console.log(mp);
+
+console.log(mp.keys());
+console.log(mp.values());
+console.log(mp.delete(key3));
+console.log(mp.keys());
+console.log(mp.size);
+mp.set(key3, "value 3");
+
+for (let [key, value] of mp) {
+  console.log(`${key}->-${value}`);
+}
+
+for (let key of mp.keys()) {
+  console.log(`key: ${key}`);
+}
+for (let value of mp.values()) {
+  console.log(`values: ${value}`);
+}
