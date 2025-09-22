@@ -289,3 +289,22 @@ console.log(mys1);
 for (let item of myst) {
   console.log(item);
 }
+
+// symbols
+console.log("Symbols->>>");
+// immutable data type
+// Identifier to object property
+const mySm = Symbol("my custom");
+console.log(mySm);
+console.log(typeof mySm);
+
+// comparison
+const mySm1 = Symbol("Sym 1");
+const mySm2 = Symbol("Sym 1");
+
+console.log(mySm1 === mySm2);
+
+const obj = {};
+obj[mySm1] = "value 1";
+obj[mySm2] = "value 2";
+console.log(obj);
