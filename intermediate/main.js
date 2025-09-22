@@ -216,3 +216,16 @@ const pg = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(pg.every((b) => b % 11 == 0));
 console.log(pg.every((b) => b % 1 == 0));
 console.log(pg.some((b) => b % 3 == 0));
+
+// reduce
+console.log("reduce->>");
+const pr = [1, 2, 3, 4, 5];
+const sum = pr.reduce((p, c) => {
+  console.log(`Previous : ${p}`);
+  console.log(`Current : ${c}`);
+  console.log(`Sum : ${p + c}`);
+  return p + c;
+}, 1);
+// previous value
+// current value
+console.log(sum);
