@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: antiquewhite;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        color: teal;
+        width: 10rem;
+        cursor: pointer;
+      }
+    </style>
+    <title>Cart quantity</title>
+  </head>
+  <body>
+    <button onclick="console.log(`Quantity: ${cartQuantity}`)">
+      Show Quantity
+    </button>
+    <button
+      onclick="cartQuantity=cartQuantity+1;
+      console.log(`Quantity:${cartQuantity}`);"
+    >
+      Add to cart
+    </button>
+    <button
+      onclick="cartQuantity=cartQuantity+2;
+      console.log(`Quantity:${cartQuantity}`);"
+    >
+      +2
+    </button>
+    <button
+      onclick="cartQuantity=cartQuantity+3;
+      console.log(`Quantity:${cartQuantity}`);"
+    >
+      +3
+    </button>
+    <button
+      onclick="cartQuantity=0;
+      console.log(`Quantity:${cartQuantity}`);"
+    >
+      RESET
+    </button>
+    <script>
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>
