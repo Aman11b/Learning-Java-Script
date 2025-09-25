@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      button {
+        background-color: teal;
+        font-size: 2rem;
+        padding: 10px 20px;
+        color: white;
+        border: none;
+      }
+    </style>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="js-btn2">There</button>
+    <script>
+      //   document.body.innerHTML = "hi";
+      //   document.title = "title";
+      console.log(document.title);
+      console.log(document.body);
+
+      console.log(typeof document.body);
+      //   console.log(document.body.innerHTML);
+      //   document.body.innerHTML = "changes";
+
+      //   document.body.innerHTML = "<button>Good</button>";
+
+      document.querySelector("button").innerText = "Good";
+      const btn2 = document.querySelector(".js-btn2");
+      btn2.innerText = "you";
+    </script>
+  </body>
+</html>
