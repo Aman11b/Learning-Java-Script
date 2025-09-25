@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "socks",
+        price: 1090,
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = "Shoe";
+      console.log(product);
+
+      product.newProp = true;
+      console.log(product);
+
+      delete product.newProp;
+      console.log(product);
+      console.log(typeof product);
+
+      const product2 = {
+        name: "shirt",
+        "delivery-time": "1 Day",
+        rating: {
+          starts: 4.5,
+          count: 87,
+        },
+        func: () => {
+          console.log(`Function inside object`);
+        },
+      };
+      console.log(product2.name);
+      console.log(product2["name"]);
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating.starts);
+      console.log(product2.rating.count);
+      product2.func();
+
+      console.log(
+        `JSON only support '' and no function and is understood by all programming language`
+      );
+
+      //   JSON.stringify(product2);
+
+      console.log(JSON.stringify(product2));
+      console.log(typeof JSON.stringify(product2));
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      console.log(
+        "Auto boxing don't work with null nad undefined it box a string or other in a box and provide its property"
+      );
+
+      console.log("->object is reference");
+
+      const obj1 = {
+        message: "hello",
+      };
+      const obj3 = {
+        message: "hello",
+      };
+      const obj2 = obj1;
+      console.log(obj2.message);
+
+      obj1.message = "hi there";
+      console.log(obj1);
+      console.log(
+        "const is for reference not for the values to which reference points to"
+      );
+      console.log(obj1);
+      console.log(obj2);
+
+      console.log(obj1 === obj2);
+      console.log(obj3 === obj2);
+
+      const obj4 = {
+        message: "hello",
+        price: 455,
+      };
+      //   const message = obj4.message;
+      const { message, price } = obj4;
+      console.log(message, price);
+
+      const obj5 = {
+        message,
+        // method: function fun1() {
+        //   console.log("method");
+        // },
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(obj5);
+      obj5.method();
+    </script>
+  </body>
+</html>

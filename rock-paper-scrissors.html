@@ -3,7 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style></style>
+    <style>
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: #f6be49;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: red;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: white;
+        border: none;
+      }
+      h1 {
+        color: teal;
+        /* letter-spacing: 0.2em; */
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+      @media (max-width: 420px) {
+        .buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
     <title>Rock Paper Scissors</title>
   </head>
   <body>
@@ -28,8 +62,31 @@
       >
         Scissors
       </button>
+      <button
+        onclick="
+        Score.wins = Score.losses = Score.ties = 0;
+        localStorage.removeItem('score');
+      "
+      >
+        RESET
+      </button>
     </div>
+
     <script>
+      let Score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
+
+      // if (!Score) {
+      //   Score = {
+      //     wins: 0,
+      //     losses: 0,
+      //     ties: 0,
+      //   };
+      // }
+
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
         let result = "";
@@ -58,8 +115,19 @@
             result = `WIN`;
           }
         }
+
+        if (result === "WIN") {
+          Score.wins++;
+        } else if (result === "LOSE") {
+          Score.losses++;
+        } else {
+          Score.ties++;
+        }
+        localStorage.setItem("score", JSON.stringify(Score));
+
         alert(
-          `You picked ${playerMove}. Computer picked ${computerMove}. You ${result} `
+          `You picked ${playerMove}. Computer picked ${computerMove}. You ${result}
+Wins: ${Score.wins} Losses:${Score.losses} Ties: ${Score.ties} `
         );
       }
 
