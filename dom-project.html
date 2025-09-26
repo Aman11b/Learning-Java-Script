@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .js-subscribe {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 1rem;
+        border: none;
+        width: 120px;
+      }
+    </style>
+    <title>DOM PROJECT</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe button</p>
+    <button class="js-subscribe">Subscribe</button>
+
+    <p>Amazon shipping calculator</p>
+    <input
+      placeholder="Cost of Order"
+      type="number"
+      class="js-cost"
+      onkeydown="handleCostKeydown(event)"
+    />
+    <button onclick="calculateTotal();">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>
+      String(25);
+      console.log("25" - 5);
+      console.log("25" + 5);
+
+      window.console.log("Window");
+      function handleCostKeydown(event) {
+        console.log(event.key);
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+      function calculateTotal() {
+        let cost = Number(document.querySelector(".js-cost").value);
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        document.querySelector(".js-total-cost").innerHTML = `Cost : \$${cost}`;
+        console.log(cost);
+      }
+      const btn = document.querySelector(".js-subscribe");
+      btn.addEventListener("click", () => {
+        if (btn.innerText === "Subscribe") {
+          btn.innerText = "Subscribed";
+        } else {
+          btn.innerText = "Subscribe";
+        }
+      });
+    </script>
+  </body>
+</html>
