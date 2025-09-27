@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input,
+button {
+  color: inherit;
+  font-size: 20px;
+}
+p {
+  text-align: left;
+  font-size: 20px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: beige;
+  color: brown;
+}
+h1 {
+  padding-bottom: 1rem;
+}
+input {
+  padding: 10px;
+  font-size: larger;
+}
+button {
+  height: inherit;
+  width: 100px;
+  border: none;
+  background-color: teal;
+  color: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.deleteBtn {
+  background-color: red;
+}
+.css-input {
+  /* width: 600px; */
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  gap: 1rem;
+}
+.css-todosList {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  gap: 1rem;
+}
+.css-todo {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
