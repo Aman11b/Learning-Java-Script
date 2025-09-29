@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>Advance Function</title>
+  </head>
+  <body>
+    <script>
+      function greeting() {
+        console.log("🙏");
+      }
+      greeting();
+
+      const num = 2;
+
+      console.log("function are values-->");
+      //   const function1 = function greeting() {
+      //     console.log("Hello");
+      //   };
+
+      //   Anonymous function
+      const function1 = function () {
+        console.log("Hello");
+      };
+      console.log(
+        "hoisting wont work here-> calling anywhere before after declaration"
+      );
+
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      console.log("function in object-->");
+      const obj1 = {
+        num: 2,
+        func: () => {
+          console.log("greeting from function in object");
+        },
+      };
+      obj1.func();
+
+      function display(param) {
+        console.log(`Parameter: ${param}`);
+      }
+      display("hare ram");
+
+      console.log("function in function-->");
+      function run(param) {
+        param();
+        // call back
+      }
+      run(() => {
+        console.log("greeting from function within function");
+      });
+
+      //   setTimeout(function () {
+      //     console.log("Time out");
+      //     console.log("Timeout2 synchronous");
+      //   }, 3000);
+
+      console.log(
+        "asynchronous code -> it wont wait for line to finish before going to next line"
+      );
+
+      console.log(
+        "synchronous code -> it will wait for line to finish before going to next line"
+      );
+
+      console.log("Next Line");
+
+      //   setInterval(function () {
+      //     console.log("every Two second");
+      //   }, 2000);
+
+      console.log("setInterval-> keep running the function after set time");
+
+      console.log("for each ->>");
+
+      ["make dinner", "wash dished", "watch youtube"].forEach(
+        (value, index) => {
+          if (value === "wash dished") {
+            return;
+          }
+          console.log(`index: ${index} value: ${value}`);
+        }
+      );
+    </script>
+  </body>
+</html>
